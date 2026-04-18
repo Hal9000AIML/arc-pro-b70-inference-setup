@@ -19,7 +19,7 @@
 # =============================================================================
 set -euo pipefail
 
-MODEL_PATH="${1:-/home/brendanhouck/models/gemma-4-26B-A4B-it}"
+MODEL_PATH="${1:-/home/hal9000aiml/models/gemma-4-26B-A4B-it}"
 TOK="${MODEL_PATH}/tokenizer.json"
 
 if [[ ! -f "$TOK" ]]; then

@@ -11,12 +11,12 @@
 # =============================================================================
 set -e
 
-MODEL=/home/brendanhouck/models/gemma-4-26B-A4B-it-UD-Q4_K_M.gguf
+MODEL=/home/hal9000aiml/models/gemma-4-26B-A4B-it-UD-Q4_K_M.gguf
 PORT=8000
 
 if ! [ -f "$MODEL" ]; then
     echo "ERROR: Model not found at $MODEL"
-    echo "Download with: python3 -c \"from huggingface_hub import hf_hub_download; hf_hub_download('unsloth/gemma-4-26B-A4B-it-GGUF', 'gemma-4-26B-A4B-it-UD-Q4_K_M.gguf', local_dir='/home/brendanhouck/models')\""
+    echo "Download with: python3 -c \"from huggingface_hub import hf_hub_download; hf_hub_download('unsloth/gemma-4-26B-A4B-it-GGUF', 'gemma-4-26B-A4B-it-UD-Q4_K_M.gguf', local_dir='/home/hal9000aiml/models')\""
     exit 1
 fi
 if curl -sf --max-time 3 "http://127.0.0.1:${PORT}/health" >/dev/null 2>&1; then

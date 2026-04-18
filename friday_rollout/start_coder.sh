@@ -8,12 +8,12 @@
 # =============================================================================
 set -e
 
-MODEL=/home/brendanhouck/models/Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf
+MODEL=/home/hal9000aiml/models/Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf
 PORT=8001
 
 if ! [ -f "$MODEL" ]; then
     echo "ERROR: Model not found at $MODEL"
-    echo "Download with: python3 -c \"from huggingface_hub import hf_hub_download; hf_hub_download('bartowski/Qwen2.5-Coder-14B-Instruct-GGUF', 'Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf', local_dir='/home/brendanhouck/models')\""
+    echo "Download with: python3 -c \"from huggingface_hub import hf_hub_download; hf_hub_download('bartowski/Qwen2.5-Coder-14B-Instruct-GGUF', 'Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf', local_dir='/home/hal9000aiml/models')\""
     exit 1
 fi
 if curl -sf --max-time 3 "http://127.0.0.1:${PORT}/health" >/dev/null 2>&1; then

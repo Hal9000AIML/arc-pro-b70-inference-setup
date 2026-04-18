@@ -76,7 +76,7 @@ Notes:
 ## Friday execution
 
 1. Install RAM + SSD, power on.
-2. `ssh brendanhouck@192.168.1.2`, verify `free -h` shows ~128GB and
+2. `ssh hal9000aiml@192.168.1.2`, verify `free -h` shows ~128GB and
    `lsblk` shows the 4TB SSD.
 3. Mount SSD at `/mnt/models` (ext4), sync models from current location
    (they should already be there from the 2026-04-08 SSD install).
