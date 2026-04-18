@@ -4,7 +4,7 @@
 > [arc-pro-b70-inference-setup-windows](https://github.com/Hal9000AIML/arc-pro-b70-inference-setup-windows).
 >
 > **After setup, apply the performance tuning kit** at
-> [arc-pro-b70-ubuntu-llm-inference-kit](https://github.com/Hal9000AIML/arc-pro-b70-ubuntu-llm-inference-kit)
+> [arc-pro-b70-ubuntu-gpu-speedup-bugfixes](https://github.com/Hal9000AIML/arc-pro-b70-ubuntu-gpu-speedup-bugfixes)
 > to get the 11 cherry-picks (MoE MMVQ, Xe2 warptile, Q8_0 reorder fix, etc.),
 > Mesa 26 PPA, backend-selection rules, and env vars (`GGML_SYCL_DISABLE_OPT=1`)
 > that actually make the cards fast. Without those, llama.cpp on B70 leaves 2–7×
@@ -17,7 +17,7 @@ Automated setup script for running LLM inference on Intel Arc Pro B70 GPUs with 
 | Repo | What it does | When you want it |
 |---|---|---|
 | **this repo** | Bare-metal Ubuntu installer: autoinstall ISO, BIOS guide, DDR4 tuning, GuC firmware 70.60.0, systemd + watchdog, first-boot service | Building a box from scratch. Start here. |
-| [arc-pro-b70-ubuntu-llm-inference-kit](https://github.com/Hal9000AIML/arc-pro-b70-ubuntu-llm-inference-kit) | llama.cpp tuning kit: 11 cherry-picks, Mesa PPA, per-model start scripts, SYCL-vs-Vulkan rules, benchmark guardrails | After the box is up, to get production-grade tok/s and MoE stability |
+| [arc-pro-b70-ubuntu-gpu-speedup-bugfixes](https://github.com/Hal9000AIML/arc-pro-b70-ubuntu-gpu-speedup-bugfixes) | llama.cpp tuning kit: 11 cherry-picks, Mesa PPA, per-model start scripts, SYCL-vs-Vulkan rules, benchmark guardrails | After the box is up, to get production-grade tok/s and MoE stability |
 | [arc-pro-b70-inference-setup-windows](https://github.com/Hal9000AIML/arc-pro-b70-inference-setup-windows) | Windows (WSL2 + Docker) installer for vLLM XPU TP=4 | You're on Windows and want single-model vLLM tensor parallelism |
 
 ## Hardware
